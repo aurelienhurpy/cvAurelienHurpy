@@ -1,0 +1,38 @@
+{% extends 'homebase.html.twig' %}
+
+{% block body %}
+<section class="intro container-fluid  mt-5">
+   <div class="text-center presentation">
+        <h1 class="googletitle"><span class="bluegoogle">H</span><span class="bluegoogle2">i</span><span class="bluegoogle2">r</span><span class="bluegoogle2">e </span><span class="greengoogle">m</span><span class="greengoogle2">e!</span></h1>
+    </div>
+
+
+    <div class="input-icone mt-2 txtpresent text-center container-fluid col-md-3">
+        <input  class="long" type="text" value="Click on the search buttons to access Aurelien Hurpy's profil">
+        <a class="search" href="{{ path('home') }}"><i class="fas fa-search"></i></a>
+    </div>
+    <div class="row justify-content-center buttonhome mt-4">
+        <button class=" mr-2 btngoogle2"><a class="search" href="{{ path('home') }}">English version</a></button>
+        <button class=" btngoogle2"><a class="search" href="{{ path('accueil') }}">Version française</a></button>
+    </div>
+    
+
+    {# <div class="input-icone mt-4 txtpresent text-center mx-auto">
+        <input  class="long" type="text" value="Cliquez sur la loupe pour accéder au CV en ligne d'Aurélien Hurpy">
+        <a class="search" href="{{ path('main') }}"><i class="fas fa-search"></i></a>
+    </div> #}
+
+
+
+
+
+
+
+
+   
+</section>
+               
+{% endblock %}
+
+    
+    

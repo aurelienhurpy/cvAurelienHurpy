@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formation | Aurelien Hurpy{% endblock %}
+
+{% block body %}
+
+<section class="container-fluid col-md-10 offset-md-1 mb-5">
+            {% for training in pagination.data %}
+            <div class="trainingdiv">
+                <p class="mt-1 maint bold3">{{training.title}}</p>
+                <p class="mt-1 bold3 maingreen">{{training.localisation}}</p>
+                <p class="mt-1 bold2 hir">{{training.date}}</p>
+                <p class="hir">{{training.content}}</p>
+                <p class="hir">{{training.content2}}</p>
+                <p class="hir">{{training.content3}}</p>
+                <p class="hir">{{training.content4}}</p>
+            {% endfor %}
+            </div>
+
+
+</section>
+
+{% endblock %}

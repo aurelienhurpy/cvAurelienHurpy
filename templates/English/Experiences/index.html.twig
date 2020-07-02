@@ -1,0 +1,25 @@
+{% extends 'baseIrl.html.twig' %}
+
+{% block title %}Experiences | Aurelien Hurpy{% endblock %}
+
+{% block body %}
+
+<section class="container-fluid col-md-10 offset-md-1 mb-5">
+            {% for ukexperience in pagination.data %}
+            <div class="mt-3 maint bold3">{{ukexperience.title}}</div>
+            <div class="mt-1 bold3 maingreen">{{ukexperience.localisation}}</div>
+            <div class="mt-1 bold2 hir">{{ukexperience.date}}</div>
+            <div class="mt-3 hir">{{ukexperience.content}}</div>
+            <div class="mt-3 hir">{{ukexperience.content2}}</div>
+            <div class="mt-3 hir">{{ukexperience.content3}}</div>
+            <div class="mt-3 hir">{{ukexperience.content4}}</div>
+            <div class="mt-3 hir">{{ukexperience.content5}}</div>
+            <div class="mt-3 hir">{{ukexperience.content6}}</div>
+            <div class="mt-3 hir">{{ukexperience.content7}}</div>
+            <div class="mt-3 hir">{{ukexperience.content8}}</div>
+            <div class="mt-3 mb-4 hir">{{ukexperience.content9}}</div>
+            {# <div class="mt-3 hir">{{ukexperience.content10}}</div> #}
+             {% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet | Aurelien Hurpy{% endblock %}
+
+{% block body %}
+
+<section class="container-fluid col-md-8 offset-md-1 projetfont">
+    <div class="mt-3 mb-5">  
+        {% for project in pagination.data %}
+        <p>
+          {{ project.paragraph1 }}
+        </p>
+        <p class="mt-3">
+          {{ project.paragraph2 }}
+        </p>
+        <p class="mt-4">
+          {{ project.paragraph3 }}
+        </p>
+        <p class="mt-4">
+          {{ project.paragraph4 }}
+        </p>
+        <p class="mt-4">
+          {{ project.paragraph5 }}
+        </p>
+        <p class="mt-4">
+          {{ project.paragraph6 }}
+        </p>
+        <p class="mt-4">
+          {{ project.paragraph7 }}
+        </p>
+        <p class="mt-4">
+          {{ project.paragraph8 }}
+        </p>
+         {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

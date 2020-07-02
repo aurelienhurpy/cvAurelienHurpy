@@ -1,0 +1,38 @@
+{% extends 'baseIrl.html.twig' %}
+
+{% block title %}Project | Aurelien Hurpy{% endblock %}
+
+{% block body %}
+
+<section class="container-fluid col-md-8 offset-md-1 projetfont">
+    <div class="mt-3 mb-5">  
+        {% for ukproject in pagination.data %}
+        <p>
+          {{ ukproject.paragraph1 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph2 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph3 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph4 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph5 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph6 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph7 }}
+        </p>
+        <p class="mt-4">
+          {{ ukproject.paragraph8 }}
+        </p>
+         {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

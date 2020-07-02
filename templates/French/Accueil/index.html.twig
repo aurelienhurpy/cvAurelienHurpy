@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil | Aurelien Hurpy{% endblock %}
+
+{% block body %}
+
+<section class="container-fluid col-md-10 offset-md-1">
+    <div class="row m-1">
+        <div class="mr-4">
+            <h6 class="mt-3 countresult">Bienvenue sur mon profil !</h6>
+            
+
+            <div class="mt-3 hire">
+                <div class="row m-1">
+                    <div>
+                        <img src="/img/googlepic.jpg" alt="" width="40px" class="googlepic">
+                    </div>
+                    <div>
+                        <span class="bold3 hir">Engagez-moi !</span></br>
+                        <p class="mt-1 mb-3">Ceci est une démo de ce que je suis capable de faire.</br>
+                        Nous pourrions peut-être travailler ensemble ?</p>
+                        <button class="btngoogle mb-2"><a href="mailto:aurelienhurpy@gmail.com">Contact</a></button>
+                    </div>
+                </div>
+            </div>
+
+            {% for intro in pagination.data %}
+            <div class="mt-4">
+                <h5><a href="{{ path('projet') }}"><span class="maint">Mon projet</span></a></h5>
+                <a href="http://www.formation31.fr" target="blank" class="maingreen bold3">{{intro.myprojectdetail}}</a>
+                <p>{{intro.myproject}}</br>
+                {{intro.dateprojet}}</p>
+            </div>
+            
+           
+
+            <div class="mt-5">
+                <h5><a href="{{ path('Formation') }}"><span class="maint">Ma formation</span></a></h5>
+                <p><span class="maingreen bold3">Eclectique</span></br>
+                De la psychologie à l'informatique</p>
+            </div>
+
+             <div class="mt-5">
+                <h5><a href="{{ path('divers') }}"><span class="maint">Mes Compétences</span></a></h5>
+                <p><span class="maingreen bold3">Opérationnelles et transposables</span></br>
+                Conduite de projet, relationnelles, esprit de synthèse et d'analyse</br>
+                Coordination et supervision d’une équipe</br>
+                Identification d’objectifs stratégiques et mise en œuvre</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+        {% for intro in pagination.data %}
+            <div class="mt-5 mainbio "><h3 class="mt-2 mainname">{{intro.name}}</h3></div>
+            <div class="mainbio container ">
+                <p class="mb-4">{{intro.bio}}</p>
+                <h5 class="mt-4"><span class="bold hir2">Taille :</span> <span class="lower">{{intro.height}}</span></h5>
+                <h5 class="mt-4"><span class="bold hir2">Localisation :</span> <span class="lower">{{intro.address}}</span></h5>
+                <h5 class="mt-4"><span class="bold hir2">Occupation :</span> <span class="lower">{{intro.position}}</span></h5>
+                <h5 class="mt-4"><span class="bold hir2">Téléphone :</span> <span class="lower">{{intro.tel}}</span></h5>
+                <h5 class="mt-4"><span class="bold hir2">Languages</span></h5>
+                <img  class="mt-1" src="/img/codelogo.jpg" alt="">
+            </div>
+            {% endfor %}
+            <div class="mainbio container mb-5">
+                <h5 class="mt-1"><span class="bold maint">Personnalité</span></h5>
+                <h5 class="mt-4"><span class="bold hir2">Créative</span><img src="/img/fivestar.jpg" alt="" width="70px" class="ml-2"></h5>
+                <h5 class="mt-3"><span class="bold hir2">Adaptabilité / réactivité / sérieux</span><img src="/img/fivestar.jpg" alt="" width="70px" class="ml-2"></h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

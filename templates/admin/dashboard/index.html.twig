@@ -1,0 +1,74 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block body %}
+    <main class="container-fluid dashtop">
+        <div class="row m-5 ">
+            <div class="col">
+                <div class="card bg-dark text-white text-center  p-5 m-2">
+                    <a class="text-white" href="{{ path('admin_infos') }}">
+                            <div class="row justify-content-center admheight">
+                                    <i class="fas fa-search fa-3x"></i> 
+                                    <h5 class="card-title mt-3 ml-3"> Intro</h5>
+                            </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-success text-white text-center  p-5 m-2">
+                    <a class="text-white" href="{{ path('admin_project_infos') }}">
+                            <div class="row justify-content-center admheight">
+                                    <i class="far fa-newspaper fa-3x"></i>
+                                    <h5 class="card-title mt-3 ml-3">Projet</h5>
+                            </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="col">  
+                <div class="card bg-warning text-white text-center  p-5 m-2">
+                    <a class="text-white" href="{{ path('admin_experience_infos') }}">
+                            <div class="row justify-content-center admheight">
+                                    <i class="fas fa-cog fa-3x"></i>
+                                    <h5 class="card-title mt-3 ml-3">Experiences</h5>
+                            </div>
+                    </a>
+                </div>
+            </div>
+        </div>  
+        <div class="dashb">
+        <div class="row m-5 pb-5">
+            <div class="col">
+                <div class="card dashteam text-white text-center p-5 m-2">
+                    <a class="text-white" href="{{ path('admin_training_infos') }}">
+                            <div class="row justify-content-center admheight">
+                                    <i class="fas fa-graduation-cap fa-3x"></i>
+                                    <h5 class="card-title mt-3 ml-3">Formation</h5>
+                            </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">  
+                <div class="card dashpartner text-white text-center  p-5 m-2">
+                    <a class="text-white" href="{{ path('admin_skills_list') }}">
+                            <div class="row  justify-content-center admheight">
+                                    <i class="fas fa-user-cog fa-3x"></i>
+                                    <h5 class="card-title mt-3 ml-3"> Compétences</h5>
+                            </div>
+                    </a>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card dashcontacts text-white text-center  p-5 m-2">
+                    <a class="text-white" href="#">
+                            <div class="row  justify-content-center admheight">
+                                    <i class="fas fa-chalkboard-teacher fa-3x"></i>
+                                    <h5 class="card-title mt-3 ml-3"> Divers</h5>
+                            </div>
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    </main>
+{% endblock %}

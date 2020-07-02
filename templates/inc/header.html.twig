@@ -1,0 +1,81 @@
+
+<header class="header-area">
+<section class="row googleheader container-fluid">
+  
+  <div class="googleleftheader">
+        <a class="search" href="{{ path('homepage') }}"><h1 class="googletitle2"><span class="bluegoogleind">H</span><span class="bluegoogle2ind">i</span><span class="bluegoogle2ind">r</span><span class="bluegoogle2ind">e </span><span class="greengoogleind">M</span><span class="greengoogleind2">e!</span></h1></a>
+  </div>
+
+  <div class="navmenu">
+    <div class="input2 mt-2 txtpresent">
+      <input  class="long2" type="text" value="Aurélien Hurpy Développeur Web Junior">
+      <a class="search" href="{{ path('accueil') }}"><i class="fas fa-search"></i></a>
+    </div>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <!-- Brand -->
+  
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler text-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <div class="navbar-container" id="navcont">
+    <ul class="navbar-nav">
+      <li>
+            <a href="{{ path('accueil') }}"><i class="far fa-address-card"></i> Tous</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="{{ path('projet') }}"><i class="far fa-newspaper"></i> Projet</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="{{ path('map') }}"><i class="fas fa-map-marker-alt"></i> Maps</a>
+            <div class="underline"></div>
+          </li>
+          {# <li>
+            <a href="{{ path('Compétences') }}"><i class="fas fa-user-cog"></i> Compétences</a>
+            <div class="underline"></div>
+          </li> #}
+          <li>
+            <a href="{{ path('experience') }}"><i class="fas fa-cog"></i> Expériences</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="{{ path('Formation') }}"><i class="fas fa-graduation-cap"></i> Formation</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <div class="dropdown">
+              <a onclick="myFunction()" class="dropbtn"><i class="fas fa-ellipsis-v"></i> Plus</a>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="{{ path('divers') }}" class="hover"><i class="fas fa-info-circle"></i> Skills</a>
+                  <a href="{{ path('activités') }}" class="hover"><i class="fas fa-gamepad"></i> Loisirs</a>
+                  <a href="{{ path('ressources') }}" class="hover"><i class="fab fa-git-square"></i> Ressources</a>
+                </div>
+            </div>
+          </li>
+          </div>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+    {# <div class="col-md-2 offset-md-4 text-center mt-4">
+      <a href="{{ path('admin_dashboard') }}"  target="_blank">Administration</a>
+    </div> #}
+</section>
+
+</header>
+
+
+
+  

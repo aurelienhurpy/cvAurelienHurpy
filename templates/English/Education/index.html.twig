@@ -1,0 +1,23 @@
+{% extends 'baseIrl.html.twig' %}
+
+{% block title %}Education | Aurelien Hurpy{% endblock %}
+
+{% block body %}
+
+<section class="container-fluid col-md-10 offset-md-1 mb-5">
+            {% for ukeducation in pagination.data %}
+            <div class="trainingdiv">
+                <p class="mt-1 maint bold3">{{ukeducation.title}}</p>
+                <p class="mt-1 bold3 maingreen">{{ukeducation.localisation}}</p>
+                <p class="mt-1 bold2 hir">{{ukeducation.date}}</p>
+                <p class="hir">{{ukeducation.content}}</p>
+                <p class="hir">{{ukeducation.content2}}</p>
+                <p class="hir">{{ukeducation.content3}}</p>
+                <p class="hir mb-4">{{ukeducation.content4}}</p>
+            {% endfor %}
+            </div>
+  
+
+</section>
+
+{% endblock %}

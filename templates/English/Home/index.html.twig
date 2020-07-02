@@ -1,0 +1,65 @@
+{% extends 'baseIrl.html.twig' %}
+{% block title %}Home | Aurelien Hurpy{% endblock %}
+{% block body %}
+<section class="container-fluid col-md-10 offset-md-1">
+    <div class="row m-1">
+        <div class="mr-5">
+            <h6 class="mt-3 countresult">Welcome to my interactive resume !</h6>
+            <div class="mt-3 hire">
+                <div class="row m-1">
+                    <div>
+                        <img src="/img/googlepic.jpg" alt="" width="40px" class="googlepic mb-3">
+                    </div>
+                    <div>
+                        <span class="bold3 hir">This is a sample of what I am able to build</span></br>
+                        <p class="mt-2 mb-3">Maybe we could work together ?!</br>
+                        </p>
+                        <button class="btngoogle mb-2"><a href="mailto:aurelienhurpy@gmail.com">Contact</a></button>
+                    </div>
+                </div>
+            </div>
+            {% for ukintro in pagination.data %}
+            <div class="mt-4 container pintro">
+                <h5><a href="{{ path('project') }}"><span class="maint">My project</span></a></h5>
+                <a href="http://www.formation31.fr" target="blank" class="maingreen bold3">{{ukintro.myprojectdetail}}</a>
+                <p>{{ukintro.myproject}}</br>
+                {{ukintro.dateprojet}}</p>
+            </div>
+            <div class="mt-5 container pintro">
+                <h5><a href="{{ path('education') }}"><span class="maint">My education</span></a></h5>
+                <p><span class="maingreen bold3">{{ukintro.mytrainingdetail}}</span></br>
+                {{ukintro.myskills}}</p>
+            </div>
+            <div class="mt-5 container pintro">
+                <h5><a href="{{ path('misc') }}"><span class="maint">My Skills</span></a></h5>
+                <p><span class="maingreen bold3">Opérationals or transferable</span></br>
+                Leading project, relationship, analytical mind</p>
+                <p>Team leadership, team skills improvement, empathy, communication</p>
+                <p>Strategic analysis, process improvement, project scheduling and oversight</p>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4">
+        {% for ukintro in pagination.data %}
+            <div class="mt-5 mainbioname container text-center"><h3 class="mt-2 mainname ">{{ukintro.name}}</h3></div>
+            <div class="mainbio container ">
+                <p class="mb-4">{{ukintro.bio}}</p>
+             
+                <h5 class="mt-4"><span class="bold hir2">Height : </span>{{ukintro.height}}</h5>
+                <h5 class="mt-4"><span class="bold hir2">Location : </span>{{ukintro.address}}</h5>
+                <h5 class="mt-4"><span class="bold hir2">Position : </span>{{ukintro.position}}</h5>
+                <h5 class="mt-4"><span class="bold hir2">Phone : </span>{{ukintro.tel}}</h5>
+                <h5 class="mt-4"><span class="bold hir2">Languages</span></h5>
+                <img  class="mt-1" src="/img/codelogo.jpg" alt="">
+            </div>
+            {% endfor %}
+            <div class="mainbio container mb-5">
+                <h5 class="mt-1"><span class="bold maint">Personnality</span></h5>
+                <h5 class="mt-4"><span class="bold hir2">Créativity</span><img src="/img/fivestar.jpg" alt="" width="70px" class="ml-2"></h5>
+                <h5 class="mt-3 mb-3"><span class="bold hir2">Adaptability / réactivity </span><img src="/img/fivestar.jpg" alt="" width="70px" class="ml-2"></h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

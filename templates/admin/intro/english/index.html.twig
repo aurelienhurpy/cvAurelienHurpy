@@ -1,0 +1,44 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Création page de présentation CV{% endblock %}
+
+{% block body %}
+    <div class="dashb">
+        <div class="breadcumb-area">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('admin_dashboard') }}">Accueil</a></li>
+                    <li class="breadcrumb-item"><a href="{{ path('admin_infos') }}">Gestion page de présentation</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Création page de présentation</li>
+                </ol>
+            </nav>
+        </div>
+        <table class="table table-hover">
+        <thead class="table-secondary text-center">
+                <th class="text-center">Titre</th>
+                <th class="text-center">Action</th>
+            </thead>
+            <div class="adminban">
+                <h1 class="text-center text-white">Création page de présentation</h1>
+            </div>
+            <tbody>
+                {% for intro in pagination.data %}
+                    <tr>
+                    
+                        <td class="text-center">{{ intro.name }}</td>
+                        
+                        <td class="text-center">
+                            <a href="{{ path('admin_introenglish_edit',{'id':intro.id}) }}" class="btn btn-edit btn-sm">Modifier <i class="fas fa-edit"></i></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if pagination.data is empty %}
+            <div class="text-center mb-5">
+                <a href="{{ path('intro_create_english') }}" class="btn table-secondary btn-sm text-center">Créer une page de présentation <i class="fas fa-edit"></i></a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
